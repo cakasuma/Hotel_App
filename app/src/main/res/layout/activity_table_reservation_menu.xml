@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.amam.order_reservation.TableReservationMenu">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txtview1tab"
+        android:layout_margin="16dp"
+        android:text="Table Reservation"
+        android:textSize="26sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/txtview1tab"
+        android:text="No Reservation has been made"
+
+        android:id="@+id/tablemessage"
+        android:visibility="invisible"
+        android:textSize="16sp"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtview1tab"
+        android:id="@+id/tablerecycler"
+        android:background="@android:color/transparent"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabtable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomnavmenu"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:src="@drawable/ic_add_black_24dp" />
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:id="@+id/bottomnavmenu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:menu="@menu/bottom_navigation_menu"
+        >
+
+    </android.support.design.widget.BottomNavigationView>
+
+</RelativeLayout>

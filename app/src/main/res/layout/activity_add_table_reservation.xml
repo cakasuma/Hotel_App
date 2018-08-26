@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.amam.order_reservation.AddTableReservation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/toolbar"
+        android:textSize="24sp"
+        android:text="Add Table Reservation"
+        android:id="@+id/txtviewadd1"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:layout_below="@+id/txtviewadd1"
+            android:text="Select Date Reservation: "
+            android:textSize="16sp"
+            android:id="@+id/txtviewadd3"
+            />
+
+    <DatePicker
+    android:id="@+id/txtTableDate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="50dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="50dp"
+    android:layout_below="@+id/txtviewadd3"
+    android:hint="Enter Date"
+    android:textColorHint="@android:color/white"
+    android:inputType="date"
+
+    />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_below="@+id/txtTableDate"
+            android:text="Select Time Reservation: "
+            android:textSize="16sp"
+            android:id="@+id/txtviewadd4"
+            />
+
+    <TimePicker
+        android:id="@+id/txtTableTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/txtviewadd4"
+        android:hint="Enter Time"
+        android:textColorHint="@android:color/white"
+        android:inputType="time"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/txtTableTime"
+        android:text="How Many Persons? (Max 10 Person)"
+        android:textSize="16sp"
+        android:id="@+id/txtviewadd2"
+        />
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/txtTableQuantity"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/txtviewadd2"
+        app:textSize="8sp"
+        app:backGroundColor="@color/colorAccent"
+        app:initialNumber="1"
+        app:finalNumber="10"
+        >
+    </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/txtTableContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/txtTableQuantity"
+        android:hint="Enter Contact Person"
+        android:textColorHint="@android:color/white"
+        android:inputType="phone"
+
+        />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/txtTableRoomNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/txtTableContact"
+        android:textAllCaps="true"
+        android:hint="Enter Room No"
+        android:textColorHint="@android:color/white"
+        android:inputType="textCapCharacters"
+
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonAddTable"
+        android:layout_below="@+id/txtTableRoomNo"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="30dp"
+        android:text="Add"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimary"
+        />
+    </RelativeLayout>
+</ScrollView>
