@@ -22,7 +22,17 @@
         <activity android:name=".ShowCart" />
         <activity android:name=".ShowHistory" />
         <activity android:name=".TableReservationMenu" />
-        <activity android:name=".AddTableReservation"></activity>
+        <activity android:name=".AddTableReservation" />
+        <activity android:name=".RoomService" />
+        <activity android:name=".DetailActivity" />
+        <activity
+            android:name=".ImageMain"
+            android:label="Gallery" />
+        <activity
+            android:name=".InfoMain"
+            android:label="Gallery" />
+        <activity android:name=".SingUpActivity" />
+        <activity android:name=".ServiceReceipt"></activity>
     </application>
 
 </manifest>

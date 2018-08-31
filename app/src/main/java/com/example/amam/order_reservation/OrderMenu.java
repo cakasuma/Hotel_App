@@ -75,21 +75,28 @@ public class OrderMenu extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.ic_restaurant:
-                        Intent ordermenuintent = new Intent(OrderMenu.this, OrderMenu.class);
-                        startActivity(ordermenuintent);
+
                         break;
                     case R.id.ic_table_reservation:
                         Intent tablereservationintent = new Intent(OrderMenu.this, TableReservationMenu.class);
                         startActivity(tablereservationintent);
+                        finish();
                         break;
                     case R.id.ic_room_service:
+                        Intent roomservice = new Intent(OrderMenu.this, RoomService.class);
+                        startActivity(roomservice);
+                        finish();
                         break;
                     case R.id.ic_hotel_info:
+                        Intent hotelinfo = new Intent(OrderMenu.this, InfoMain.class);
+                        startActivity(hotelinfo);
+                        finish();
                         break;
                     case R.id.ic_logout:
                         FirebaseAuth.getInstance().signOut();
                         Intent loginintent = new Intent(OrderMenu.this, MainActivity.class);
                         startActivity(loginintent);
+                        finish();
                         break;
                 }
                 return false;

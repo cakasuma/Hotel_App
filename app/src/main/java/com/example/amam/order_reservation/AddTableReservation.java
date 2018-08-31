@@ -93,7 +93,7 @@ public class AddTableReservation extends AppCompatActivity {
 
                 String TimeTable = hour +":"+ minute+" "+am_pm;
 
-                String QuantityTable = txtQuantityTable.getNumber();
+                String QuantityTable = txtQuantityTable.getNumber()+" Guest";
 
                 String ContactTable = txtContactTable.getText().toString();
 

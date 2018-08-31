@@ -120,19 +120,25 @@ public class TableReservationMenu extends AppCompatActivity {
                     case R.id.ic_restaurant:
                         Intent ordermenuintent = new Intent(TableReservationMenu.this, OrderMenu.class);
                         startActivity(ordermenuintent);
+                        finish();
                         break;
                     case R.id.ic_table_reservation:
-                        Intent tablereservationintent = new Intent(TableReservationMenu.this, TableReservationMenu.class);
-                        startActivity(tablereservationintent);
                         break;
                     case R.id.ic_room_service:
+                        Intent roomservice = new Intent(TableReservationMenu.this, RoomService.class);
+                        startActivity(roomservice);
+                        finish();
                         break;
                     case R.id.ic_hotel_info:
+                        Intent hotelinfo = new Intent(TableReservationMenu.this, InfoMain.class);
+                        startActivity(hotelinfo);
+                        finish();
                         break;
                     case R.id.ic_logout:
                         FirebaseAuth.getInstance().signOut();
                         Intent loginintent = new Intent(TableReservationMenu.this, MainActivity.class);
                         startActivity(loginintent);
+                        finish();
                         break;
                 }
                 return false;

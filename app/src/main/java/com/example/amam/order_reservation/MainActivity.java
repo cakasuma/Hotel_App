@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private MaterialEditText mLogEmail;
     private MaterialEditText mLogPass;
     private Button mLogButton;
+    private Button btnSignUp;
     private FirebaseAuth mAuth;
 
     @Override
@@ -36,11 +37,20 @@ public class MainActivity extends AppCompatActivity {
         mLogButton = (Button) findViewById(R.id.logButton);
         mLogEmail = (MaterialEditText) findViewById(R.id.logEmail);
         mLogPass = (MaterialEditText) findViewById(R.id.logPassword);
+        btnSignUp = (Button) findViewById(R.id.sign_up_button);
+
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SingUpActivity.class));
+
+            }
+        });
 
         mLogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Toast.makeText(getApplicationContext(),"Loading..", Toast.LENGTH_SHORT).show();
                 if(!validateForm()){
                     return;
                 }
@@ -103,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
+
     }
 
     private void updateUI(FirebaseUser user){
@@ -111,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(myIntent);
             mLogEmail.setText("");
             mLogPass.setText("");
+            finish();
         }
         else{
             mLogEmail.setText("");

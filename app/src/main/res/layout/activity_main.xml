@@ -58,6 +58,18 @@
         android:background="@color/colorAccent"
         />
 
+    <Button
+        android:id="@+id/sign_up_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="@null"
+        android:layout_below="@id/logButton"
+        android:text="Not member? Register"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="15dp" />
+
 
 </RelativeLayout>
 
